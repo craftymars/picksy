@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Picksy.exe | Let Fate Decide ♡</title>
+
+  <!-- Picksy favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+
+  <!-- Mobile browser theme -->
+  <meta name="theme-color" content="#FF299A">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<!-- Decorative animated background -->
+<div class="picksy-background" aria-hidden="true">
+  <span class="floating-symbol heart h1">♥</span>
+  <span class="floating-symbol heart h2">♡</span>
+  <span class="floating-symbol heart h3">♥</span>
+  <span class="floating-symbol heart h4">♡</span>
+
+  <span class="floating-symbol star s1">✦</span>
+  <span class="floating-symbol star s2">✧</span>
+  <span class="floating-symbol star s3">✦</span>
+  <span class="floating-symbol star s4">✧</span>
+
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+</div>
+
+<body>
+  <main class="window">
+    <header class="titlebar">
+      <span>♥ PICKSY.EXE</span>
+      <span class="chrome">_ □ ×</span>
+    </header>
+
+    <section class="content">
+      <div class="eyebrow">✦ YOUR LITTLE DECISION MACHINE ✦</div>
+      <h1>can't decide<span>?</span></h1>
+      <p class="subtitle">let fate pick for you ♡</p>
+
+      <div class="wheel-wrap enchanted-wheel">
+        <canvas id="wheel" width="600" height="600"
+          aria-label="Decision wheel"></canvas>
+        <div class="pointer" aria-hidden="true">▼</div>
+      </div>
+
+      <button id="spin" class="primary">
+        ✦ SPIN THE WHEEL ✦
+      </button>
+      <p id="status" role="status" aria-live="polite">
+        ready when you are!
+      </p>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>♡ YOUR CHOICES</h2>
+          <button id="reset" class="ghost">RESET</button>
+        </div>
+
+        <ul id="choices"></ul>
+
+        <form id="add-form">
+          <input id="new-choice" maxlength="36"
+            placeholder="add another option..."
+            aria-label="New choice" required>
+          <button type="submit">+ ADD</button>
+        </form>
+      </div>
+
+      <div class="presets">
+        <span>QUICK PICKS:</span>
+        <button data-preset="food">🍓 food</button>
+        <button data-preset="games">🎮 games</button>
+        <button data-preset="weekend">✦ weekend</button>
+      </div>
+    </section>
+
+    <footer>made for the indecisive ♡</footer>
+  </main>
+
+  <dialog id="result">
+    <div class="result-inner">
+      <div class="sparkles">✦ ♥ ✦</div>
+      <p>THE WHEEL HAS SPOKEN</p>
+      <h2 id="winner"></h2>
+      <button id="again" class="primary">SPIN AGAIN ↻</button>
+      <button id="close" class="ghost">CLOSE ×</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
